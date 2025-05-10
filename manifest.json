@@ -1,6 +1,7 @@
 ﻿{
     "name": "mObywatel",
     "short_name": "mObywatel",
+    "start_url": "/dada/inex.html",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
