@@ -1,7 +1,7 @@
-﻿{
+{
     "name": "mObywatel",
     "short_name": "mObywatel",
-    "start_url": "/dada/inex.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
@@ -27,7 +27,7 @@
       "sizes": "168x168",
       "type": "image/png"
     }, {
-      "src": "icons/logo192",
+      "src": "icons/logo192.png",
       "sizes": "192x192",
       "type": "image/png"
     }, {
