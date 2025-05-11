@@ -17,41 +17,34 @@ const URLS_TO_CACHE = [
   'sw.js',
 
   // mObywatel 2.0_files
-  'mObywatel 2.0_files/main.css',
-  'mObywatel 2.0_files/main.js',
+  'mObywatel 2.0_files/all.min.css',
 
   // dashboard_files
-  'dashboard_files/dashboard.css',
-  'dashboard_files/dashboard.js',
+  'dashboard_files/css',
 
   // documents_files
-  'documents_files/documents.css',
-  'documents_files/documents.js',
+  'documents_files/css',
 
   // dowodnowy_files
+  'dowodnowy_files/css',
   'dowodnowy_files/dowodnowy.css',
-  'dowodnowy_files/dowodnowy.js',
+  'dowodnowy_files/all.min.css',
+  'dowodnowy_files/main.css',
+  'dowodnowy_files/jquery-3.6.0.min.js',
+  'dowodnowy_files/rozwijka.js',
+  'dowodnowy_files/scale.js',
+  'dowodnowy_files/sw.js',
+  'dowodnowy_files/timenew.js',
+  'dowodnowy_files/wybor.js',
 
   // more_files
-  'more_files/more.css',
-  'more_files/more.js',
+  'more_files/css',
 
   // qr_files
-  'qr_files/qr.css',
-  'qr_files/qr.js',
+  'qr_files/css',
 
   // services_files
-  'services_files/services.css',
-  'services_files/services.js',
-
-  // all your icons
-  'icons/logo48.png',
-  'icons/logo72.png',
-  'icons/logo96.png',
-  'icons/logo144.png',
-  'icons/logo168.png',
-  'icons/logo192.png',
-  'icons/logo512.png'
+  'services_files/css'
 ];
 
 self.addEventListener('install', event => {
