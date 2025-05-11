@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ładny Formularz</title>
+  <style>
+    /* Reset niektórych styli przeglądarki */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
 
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f2f5;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #333;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #4a90e2;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      background: #4a90e2;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-group button:hover {
+      background: #357ab8;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container" action="/submit" method="post">
+    <h2>Kontakt</h2>
+    <div class="form-group">
+      <label for="name">Imię i nazwisko</label>
+      <input type="text" id="name" name="name" required placeholder="Jan Kowalski"/>
+    </div>
+    <div class="form-group">
+      <label for="email">Adres e-mail</label>
+      <input type="email" id="email" name="email" required placeholder="email@przyklad.pl"/>
+    </div>
+    <div class="form-group">
+      <label for="message">Wiadomość</label>
+      <textarea id="message" name="message" required placeholder="Twoja wiadomość..."></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit">Wyślij</button>
+    </div>
+  </form>
+</body>
+</html>
