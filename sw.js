@@ -1,10 +1,11 @@
+// sw.js
+
 const CACHE_VERSION = 'v1';
 const CACHE_NAME    = `dada-cache-${CACHE_VERSION}`;
 
-// Wszystkie pliki z Twojego repo do pre-cache’owania
+// === every single file in your repo ===
 const URLS_TO_CACHE = [
-  // Strony
-  './',
+  './',                // root
   'index.html',
   'dashboard.html',
   'documents.html',
@@ -15,33 +16,42 @@ const URLS_TO_CACHE = [
   'manifest.json',
   'sw.js',
 
-  // Folder mObywatel 2.0_files
+  // mObywatel 2.0_files
   'mObywatel 2.0_files/main.css',
   'mObywatel 2.0_files/main.js',
 
-  // Dashboard
+  // dashboard_files
   'dashboard_files/dashboard.css',
   'dashboard_files/dashboard.js',
 
-  // Documents
+  // documents_files
   'documents_files/documents.css',
   'documents_files/documents.js',
 
-  // Dowodnowy
+  // dowodnowy_files
   'dowodnowy_files/dowodnowy.css',
   'dowodnowy_files/dowodnowy.js',
 
-  // More
+  // more_files
   'more_files/more.css',
   'more_files/more.js',
 
-  // QR
+  // qr_files
   'qr_files/qr.css',
   'qr_files/qr.js',
 
-  // Services
+  // services_files
   'services_files/services.css',
-  'services_files/services.js'
+  'services_files/services.js',
+
+  // all your icons
+  'icons/logo48.png',
+  'icons/logo72.png',
+  'icons/logo96.png',
+  'icons/logo144.png',
+  'icons/logo168.png',
+  'icons/logo192.png',
+  'icons/logo512.png'
 ];
 
 self.addEventListener('install', event => {
@@ -66,13 +76,10 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
-  
   event.respondWith(
     caches.match(event.request)
       .then(cached => {
-        if (cached) {
-          return cached;
-        }
+        if (cached) return cached;
         return fetch(event.request).then(networkResponse => {
           if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
             return networkResponse;
