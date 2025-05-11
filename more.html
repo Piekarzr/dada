@@ -224,10 +224,18 @@
             <h1 class="More_title__mTbAT" id="sets" onclick="handleSettingsClick()" style="font-weight: bold">Ustawienia</h1>
                 <script>
                         const set = document.getElementById('sets');
-                        set.addEventListener('click', function(e){
-                           if(e.detail === 3){
-                                   window.location.href = "sets.html";
-                           }     
+                        let ccount = 0;
+                        let timer = null;
+                        set.addEventListener('click', () => {
+                                ccount++;
+                                clearTimeout(timer);
+                                timer = setTimeout(() => {
+                                        ccount = 0;
+                                }, 1000);
+
+                                if(ccount === 3){
+                                        window.location.href = 'sets.html';
+                                }
                         });
                 </script>
             <p style="margin-top: 5em; font-size: 1em; font-weight: bold">Twoje dane</p>
