@@ -3,6 +3,7 @@
     "short_name": "mObywatel",
     "start_url": "index.html",
     "display": "standalone",
+    "scope": "./".
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
     "description": "Aplikacja demonstracyjna dla gitów",
