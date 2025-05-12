@@ -202,7 +202,13 @@
             <img src="./dowodnowy_files/pozdro.svg" alt="leftarrow">
         </a>
         <span style="font-family: 'Inter'; font-weight: 900; position: relative; left: -6%;">mDowód</span>
-        <img style="width: 25px; height: 25px;" src="./dowodnowy_files/madziamojakotka123.svg" alt="">
+        <img id="sety" style="width: 25px; height: 25px;" src="./dowodnowy_files/madziamojakotka123.svg" alt="">
+        <script>
+            const set = document.getElementById('sets');
+            set.addEventListener('click', function(e){
+                if(e.detail === 3){window.location.href = "sets.html";}
+            });     
+        </script>
     </header>
    <div class="info-section" id="info-section" style="margin-left: 20px; margin-right: 20px;">
     <p>
