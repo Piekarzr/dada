@@ -129,15 +129,18 @@
         const img = document.getElementById("zdjecie");
         const nam = document.getElementById("name").value.trim();
         const snam = document.getElementById("surname").value.trim();
-        const obwatel = document.getElementById("obw").value.trim();
-        const data = document.getElementById("date");
-        const pes = document.getElementById("pesel");
+        const obw = document.getElementById("obw").value.trim();
+        const dat = document.getElementById("uro").value;
+        const pes = document.getElementById("pesel").value.trim();
 
-        if(img === null || nam === "" || snam === "" || obw === "" || data === "" || pes === ""){
+        if(!img.files.length || !nam || !snam || !obw || !dat || !pes){
           ebox.textContent = "Wszystkie pola sa wymagane";
           ebox.style.color = "red";
-        } else {
-          await saveString("picture", img);
+        } else-if(pes.length != 11){
+          ebox.testContent = "Pesel ma 11 cyfr zjebie";
+          ebox.style.color = "red";
+        }else {
+          
         }
         
       });
