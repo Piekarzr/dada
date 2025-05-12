@@ -1,5 +1,5 @@
 localforage.config({
-  driver: localforage.INDEXEDDG,
+  driver: localforage.INDEXEDDB,
   name: 'kaka',
   storeName: 'keyvalue'
 });
