@@ -136,11 +136,18 @@
         if(!img.files.length || !nam || !snam || !obw || !dat || !pes){
           ebox.textContent = "Wszystkie pola sa wymagane";
           ebox.style.color = "red";
-        } else-if(pes.length != 11){
+        } else if(pes.length != 11){
           ebox.testContent = "Pesel ma 11 cyfr zjebie";
           ebox.style.color = "red";
         }else {
-          
+          await saveString("userName", nam);
+          await saveString("userSurname", snam);
+          await saveString("userObw", obw);
+          await saveString("userUro", dat);
+          await saveString("userPesel", pes);
+          await saveBlob("userPhoto", img.files[0]);
+          ebox.textContent = "Dane zapisane pomyślnie!";
+          ebox.style.color = "green";
         }
         
       });
