@@ -1,18 +1,25 @@
 localforage.config({
-  driver: localforage.INDEXEDDB,
-  name: 'kaka',
-  storeName: 'keyvalue'
+  driver    : localforage.INDEXEDDB,  // poprawnienie
+  name      : 'kaka',
+  storeName : 'keyvalue'
 });
 
-async function saveString(key, value){
-  await localforage.setItem(key, value);
+async function saveString(key, value) {
+  return localforage.setItem(key, value);
 }
 
-async function getString(key){
-  var result = await localforage.getItem(key);
-  return result;
+async function getString(key) {
+  return localforage.getItem(key);
+}
+
+async function saveBlob(key, blob) {
+  return localforage.setItem(key, blob);
+}
+
+async function loadBlob(key) {
+  return localforage.getItem(key);
 }
 
 async function clearStorage() {
-  await localforage.clear();
+  return localforage.clear();
 }
