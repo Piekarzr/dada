@@ -247,17 +247,35 @@
             </div>
         </section>
         <section id="praw">
-            <p class="main">JAN</p>
-            <p class="sub">Imię (Imiona)</p><br>
-            <p class="main">SZLAMA</p>
-            <p class="sub">Nazwiskо</p><br>
-            <p>POLSKIE</p>
-            <p class="sub">Obywatelstwo</p><br>
-            <p class="main">26.05.2006</p>
-            <p class="sub">Data urodzenia</p><br>
-            <p class="main">06252640475</p>
-            <p class="sub">Numer PЕSEL</p><br>
+          <p class="main" id="nameDisplay">…</p>
+          <p class="sub">Imię (Imiona)</p><br>
+
+          <p class="main" id="surnameDisplay">…</p>
+          <p class="sub">Nazwisko</p><br>
+
+          <p class="main" id="obwDisplay">…</p>
+          <p class="sub">Obywatelstwo</p><br>
+
+          <p class="main" id="uroDisplay">…</p>
+          <p class="sub">Data urodzenia</p><br>
+
+          <p class="main" id="peselDisplay">…</p>
+          <p class="sub">Numer PESEL</p><br>
         </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                const name    = await getString('userName');
+                const surname = await getString('userSurname');
+                const obw     = await getString('userObw');
+                const uro     = await getString('userUro');
+                const pesel   = await getString('userPesel');
+                document.getElementById('nameDisplay').textContent    = name    || '';
+                document.getElementById('surnameDisplay').textContent = surname || '';
+                document.getElementById('obwDisplay').textContent     = obw     || '';
+                document.getElementById('uroDisplay').textContent     = uro     || '';
+                document.getElementById('peselDisplay').textContent   = pesel   || '';
+            });
+        </script>
     </main>
   <section id="bottom">
         <img src="./dowodnowy_files/checkmark.svg" alt="checkmark">
