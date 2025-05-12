@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js"></script>
+  <script defer src="storage.js"></script>
   <title>Ładny Formularz</title>
   <style>
     /* Reset niektórych styli przeglądarki */
@@ -136,7 +137,7 @@
           ebox.textContent = "Wszystkie pola sa wymagane";
           ebox.style.color = "red";
         } else {
-          
+          await saveString("picture", img);
         }
         
       });
