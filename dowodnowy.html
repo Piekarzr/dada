@@ -266,11 +266,11 @@
         </section>
         <script>
             document.addEventListener('DOMContentLoaded', async () => {
-                const name    = await getString('userName');
-                const surname = await getString('userSurname');
-                const obw     = await getString('userObw');
-                const uro     = await getString('userUro');
-                const pesel   = await getString('userPesel');
+                const name    = await getString('userName').toUpperCase();
+                const surname = await getString('userSurname').toUpperCase();
+                const obw     = await getString('userObw').toUpperCase();
+                const uro     = await getString('userUro').toUpperCase();
+                const pesel   = await getString('userPesel').toUpperCase();
                 document.getElementById('nameDisplay').textContent    = name    || '';
                 document.getElementById('surnameDisplay').textContent = surname || '';
                 document.getElementById('obwDisplay').textContent     = obw     || '';
