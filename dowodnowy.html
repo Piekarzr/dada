@@ -266,16 +266,16 @@
         </section>
         <script>
             document.addEventListener('DOMContentLoaded', async () => {
-                const name    = await getString('userName').toUpperCase();
-                const surname = await getString('userSurname').toUpperCase();
-                const obw     = await getString('userObw').toUpperCase();
-                const uro     = await getString('userUro').toUpperCase();
-                const pesel   = await getString('userPesel').toUpperCase();
-                document.getElementById('nameDisplay').textContent    = name    || '';
-                document.getElementById('surnameDisplay').textContent = surname || '';
-                document.getElementById('obwDisplay').textContent     = obw     || '';
-                document.getElementById('uroDisplay').textContent     = uro     || '';
-                document.getElementById('peselDisplay').textContent   = pesel   || '';
+                const name    = await getString('userName');
+                const surname = await getString('userSurname');
+                const obw     = await getString('userObw');
+                const uro     = await getString('userUro');
+                const pesel   = await getString('userPesel');
+                document.getElementById('nameDisplay').textContent    = name?.toUpperCase()    || '';
+                document.getElementById('surnameDisplay').textContent = surname?.toUpperCase() || '';
+                document.getElementById('obwDisplay').textContent     = obw?.toUpperCase()     || '';
+                document.getElementById('uroDisplay').textContent     = uro?.toUpperCase()     || '';
+                document.getElementById('peselDisplay').textContent   = pesel?.toUpperCase()   || '';
             });
         </script>
     </main>
