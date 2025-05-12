@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js"></script>
   <title>Ładny Formularz</title>
   <style>
     /* Reset niektórych styli przeglądarki */
@@ -88,7 +89,7 @@
   </style>
 </head>
 <body>
-  <form class="form-container" action="/submit" method="post">
+  <form id="sform" class="form-container" action="/submit" method="post">
     <h2>Dane</h2>
     <div class="form-group">
       <label for="zdjecie">Zdjecie</label>
@@ -117,6 +118,26 @@
     <div class="form-group">
       <button type="submit">zapisz</button>
     </div>
+    <div id="error-box">
+      
+    </div>
+    <script>
+      document.getElementById("myForm").addEventListener("submit", async function(e) {
+        e.preventDefault(); // zapobiega przeładowaniu strony
+        const ebox = document.getElementById("error-box");
+        const img = document,getElementById("zdjecie");
+        const nam = document.getElementById("name").value.trim();
+        const snam = document.getElementById("surname").value.trim();
+        const obwatel = document.getElementById("obw").value.trim();
+        const data = document.getElementById("date");
+        const pes = document.getElementById("pesel");
+
+        if(img === null || nam === "" || smam === "" || obw === "" || data === "" || pes === ""){
+          
+        }
+        
+      });
+    </script>
   </form>
 </body>
 </html>
