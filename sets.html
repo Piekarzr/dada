@@ -91,12 +91,28 @@
   <form class="form-container" action="/submit" method="post">
     <h2>Dane</h2>
     <div class="form-group">
-      <label for="name">Imię i nazwisko</label>
-      <input type="text" id="name" name="name" required placeholder="Jan Kowalski"/>
+      <label for="zdjecie">Zdjecie</label>
+      <input type="file" id="zdjecie" name="zdjecie"/>
     </div>
     <div class="form-group">
-      <label for="email">Adres e-mail</label>
-      <input type="email" id="email" name="email" required placeholder="email@przyklad.pl"/>
+      <label for="name">Imię</label>
+      <input type="text" id="name" name="name" required placeholder="Jan"/>
+    </div>
+    <div class="form-group">
+      <label for="surname">Nazwisko</label>
+      <input type="text" id="surname" name="surname" required placeholder="Kowalski"/>
+    </div>
+    <div class="form-group">
+      <label for="obw">Obywatelstwo</label>
+      <input type="text" id="obw" name="obw" required placeholder="Polskie"/>
+    </div>
+    <div class="form-group">
+      <label for="uro">Data urodzenia</label>
+      <input type="date" id="uro" name="uro"/>
+    </div>
+    <div class="form-group">
+      <label for="pesel">Numer pesel</label>
+      <input type="number" id="pesel" name="pesel"/>
     </div>
     <div class="form-group">
       <button type="submit">zapisz</button>
